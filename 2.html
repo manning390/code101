@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Code 101.1</title>
+		<meta charset="utf-8">
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+			@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+			@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+			body {
+				font-family: 'Droid Serif';
+			}
+			h1, h2, h3 {
+				font-family: 'Yanone Kaffeesatz';
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+			.remark-slide-content h1 { font-size: 3em; }
+			.remark-slide-content h2 { font-size: 2em; }
+			.remark-slide-content h3 { font-size: 1.6em; }
+			.footnote {
+				position: absolute;
+				bottom: 3em;
+			}
+			li p { line-height: 1.25em; }
+			.red { color: #fa0000; }
+			.large { font-size: 2em; }
+			a, a > code {
+				color: rgb(249, 38, 114);
+				text-decoration: none;
+			}
+			code {
+				background: #e7e8e2;
+				border-radius: 5px;
+			}
+			.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+			.remark-code-line-highlighted     { background-color: #373832; }
+			.pull-left {
+				float: left;
+				width: 47%;
+			}
+			.pull-right {
+				float: right;
+				width: 47%;
+			}
+			.pull-right ~ p {
+				clear: both;
+			}
+			#slideshow .slide .content code {
+				font-size: 0.8em;
+			}
+			#slideshow .slide .content pre code {
+				font-size: 0.9em;
+				padding: 15px;
+			}
+			.inverse {
+				background: #272822;
+				color: #777872;
+				text-shadow: 0 0 20px #333;
+			}
+			.inverse h1, .inverse h2 {
+				color: #f3f3f3;
+				line-height: 0.8em;
+			}
+
+			/* Slide-specific styling */
+			#slide-inverse .footnote {
+				bottom: 12px;
+				left: 20px;
+			}
+			#slide-how .slides {
+				font-size: 0.9em;
+				position: absolute;
+				top:  151px;
+				right: 140px;
+			}
+			#slide-how .slides h3 {
+				margin-top: 0.2em;
+			}
+			#slide-how .slides .first, #slide-how .slides .second {
+				padding: 1px 20px;
+				height: 90px;
+				width: 120px;
+				-moz-box-shadow: 0 0 10px #777;
+				-webkit-box-shadow: 0 0 10px #777;
+				box-shadow: 0 0 10px #777;
+			}
+			#slide-how .slides .first {
+				background: #fff;
+				position: absolute;
+				top: 20%;
+				left: 20%;
+				z-index: 1;
+			}
+			#slide-how .slides .second {
+				position: relative;
+				background: #fff;
+				z-index: 0;
+			}
+
+			/* Two-column layout */
+			.left-column {
+				color: #777;
+				width: 20%;
+				height: 92%;
+				float: left;
+			}
+				.left-column h2:last-of-type, .left-column h3:last-child {
+					color: #000;
+				}
+			.right-column {
+				width: 75%;
+				float: right;
+				padding-top: 1em;
+			}
+
+			.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+		</style>
+	</head>
+	<body>
+		<textarea id="source">
+			class: middle, center, inverse
+			# Code 101.2: The Tools of a Programmer
+			---
+			## Summary
+			0. Operators
+			1. Variables
+			2. Conditions
+			3. Loops
+			4. Functions
+			---
+			class: middle center, inverse
+			## Operators
+			---
+			### Operators
+			> Programming languages typically support a set of operators: constructs which behave generally like functions but which differ syntactically or semantically from usual functions.
+			> Common simple examples include arithmetic, comparison, and logical operations
+			---
+			### Operators
+			> Most barebone functions, used frequently thus syntatically and semantically different
+			---
+			### Operators
+			```py
+			# Arithmetic
+			5 + 3 # Plus
+			# 8
+			5 - 3 # Minus
+			# 2
+			5 * 3 # Multiplication
+			# 15
+			```
+			---
+			### Operators
+			```py
+			5 // 3 # Integer divison
+			# 1
+			5 / 3 # Divison
+			# 1.6666666666666667
+			5 % 3 # Modulo
+			# 2
+			```
+			---
+			### Operators
+			```py
+			# Assignment
+			dog = 5
+			# Assign + Plus
+			dog *= 3
+			# dog = 15
+			```
+			```c
+			dog++; // Not in python!!!
+			// dog = 16
+			```
+			---
+			class: middle, center, inverse
+			## Variables
+			---
+			### Variables
+			> A data item that may take on more than one value during the runtime of a program
+			> State, named data
+			---
+			### Variables
+			```py
+			dog = "uwu"
+			cat = 16
+			score = [4, 5, 2, 6]
+			dog = cat
+			# dog = 16
+			```
+			---
+			class: middle, center, inverse
+			## Conditions
+			---
+			### Conditions
+			> Conditional statements, expressions, and constructs perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false
+			> aka logic
+			---
+			### Conditions
+			> Conditional statements, expressions, and constructs perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false
+			> aka logic
+			### Booleans
+			> A binary variable, having two possible values called 'true' and 'false'
+			> True or False
+			---
+			### Conditions
+			```py
+			# Conditions
+			# if true :
+			# 	do something
+			# elif !false:
+			#  do something else
+
+			if a > 5:
+				a *= 2
+			elif a == 4:
+				a = 3
+			else:
+				a -= 1
+
+			# Boolean logic
+			# true = true
+			# false = false
+			# true = true or false
+			# false = true and false
+			# false = false and false
+			# true = not false
+			# false = not true
+			```
+			---
+			### Conditions
+			```py
+			# Comparators
+			a == b
+			a > b
+			a >= b
+			not a
+
+			```
+			---
+			class: middle, center, inverse
+			## Loops
+			---
+			### Loops
+			> a sequence of instructions that is continually repeated until a certain condition is reached
+			---
+			### Loops
+			Syntax and style change depending on your language
+
+			```c
+			for (int i = 0; i < 10; i++) {
+			  // Repeat 10 times
+			}
+			```
+			---
+			### Loops
+			```py
+			for i in range(0, 10): # For loops
+			  print("hello " + i)
+
+			n = 0
+			while n < 20: # While loops, tend to be used for infinite loops
+			 n += 1
+
+			while True:
+			  if x == 5:
+			    break
+
+			 fruits = ['Apple', 'Tomato', 'Banana']
+			 for fruit in fruits: # Can be refered to as foreach or each loops
+			  print(fruit + ' can be found in the produce isle')
+			```
+			---
+			class: middle, center, inverse
+			## Functions
+			---
+			### Functions
+			> A named section of a program that performs a specific task. In this sense, a function is a type of procedure or routine.
+			> Some programming languages make a distinction between a function, which returns a value, and a procedure, which performs some operation but does not return a value
+			> Also known as a method, when it is a member to a class
+			---
+			### Functions
+			> A named section of a program that performs a specific task. In this sense, a function is a type of procedure or routine.
+			> Some programming languages make a distinction between a function, which returns a value, and a procedure, which performs some operation but does not return a value
+			> Also known as a method, when it is a member to a class
+			### Algorithm
+			> A set of instructions, typically to solve a problem or perform a computation.
+			> A series of steps in order to do something.
+			---
+			## Your second program!
+			We're going to make tic-tac-toe
+			```sh
+			cd ~/code
+			mkdir projects
+			cd projects
+			mkdir tic
+			cd tic
+			subl tic.py
+			```
+
+		</textarea>
+		<script src="https://remarkjs.com/downloads/remark-latest.min.js">
+		</script>
+		<script>
+			// function loadFile() {
+			// 	var xmlhttp = new XMLHttpRequest();
+			// 	var slide = 1
+			// 	var url = "file:///D:/Railalis/Documents/Code/code101/" + slide +".html";
+			// 	 xmlhttp.onreadystatechange = function() {
+			// 	 	if (xmlhttp.)
+			// 	 }
+			// }
+			var slideshow = remark.create();
+		</script>
+	</body>
+</html>
